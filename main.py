@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import random
 
+@st.cache(suppress_st_warning=True)
 def read_words(file):
     with open(file,'r') as f:
         words = f.readlines()
